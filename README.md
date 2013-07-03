@@ -5,7 +5,7 @@ A Grunt task for compiling [ejs](http://npmjs.org/package/ejs) templates.
 ## Getting Started
 
 Install this grunt plugin next to your project's
-[Gruntfile.js][http://gruntjs.com/getting-started] with: `npm install grunt-ejs --save-dev`.
+[Gruntfile.js](http://gruntjs.com/getting-started) with: `npm install grunt-ejs --save-dev`.
 
 Then add this line to your project's `Gruntfile.js`:
 
