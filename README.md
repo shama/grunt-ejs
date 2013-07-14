@@ -30,6 +30,57 @@ grunt.initConfig({
 });
 ```
 
+### Passing data/helpers to the templates
+Use `options` to pass data and helpers to the templates:
+
+**Gruntfile.js**:
+```js
+grunt.initConfig({
+  ejs: {
+    all: {
+      options: {
+        title: 'My Website',
+        url: function(url) {
+          return 'http://example.com/formatted/url/' + url;
+        },
+      },
+      src: ['app/**/*.ejs', '!app/partials/**/*'],
+      dest: 'dist/',
+      expand: true,
+      ext: '.html',
+    },
+  },
+});
+```
+
+**app/index.ejs**:
+```html
+<html>
+  <head>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <a href="<%= url('home.html') %>">Home Page</a>
+  </body>
+</html>
+```
+
+Ideally all your helpers and non-app specific config should be another module and merged in like this:
+
+```js
+grunt.initConfig({
+  ejs: {
+    all: {
+      options: grunt.util._.merge(require('my-helpers'), {
+        title: 'My Website'
+      }),
+      src: 'index.ejs'],
+      dest: 'index.html',
+    },
+  },
+});
+```
+
 ## Release History
 
 * 0.1.0 initial release
