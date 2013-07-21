@@ -74,7 +74,7 @@ grunt.initConfig({
       options: grunt.util._.merge(require('my-helpers'), {
         title: 'My Website'
       }),
-      src: 'index.ejs'],
+      src: 'index.ejs',
       dest: 'index.html',
     },
   },
