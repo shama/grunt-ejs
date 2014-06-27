@@ -1,16 +1,14 @@
 module.exports = function(grunt) {
-  'use strict';
-
   grunt.initConfig({
     ejs: {
       all: {
-        src: ['app/**/*.ejs', '!app/partials/**/*'],
-        dest: 'dist/',
+        src: ['test/fixtures/**/*.ejs'],
+        dest: 'tmp/',
         expand: true,
         ext: '.html',
       },
     },
   });
-
+  grunt.loadTasks('tasks');
   grunt.registerTask('default', ['ejs']);
 };
