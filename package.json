@@ -33,5 +33,9 @@
   "keywords": [
     "gruntplugin",
     "ejs"
+  ],
+  "files": [
+    "tasks",
+    "LICENSE-MIT"
   ]
 }
