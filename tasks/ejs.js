@@ -14,6 +14,13 @@ module.exports = function(grunt) {
     grunt.verbose.writeflags(options, 'Options');
     this.files.forEach(function(file) {
       var out = file.src.map(grunt.file.read).join('');
+      if (file.src.length == 0) {
+        return;
+      }
+      if (file.src.length > 1) {
+        grunt.log.warn('Too many source files.');
+      }
+
       options.filename = file.src[0];
       grunt.file.write(file.dest, ejs.render(out, options));
       grunt.log.ok('Wrote ' + file.dest);
