@@ -83,6 +83,9 @@ grunt.initConfig({
 
 ## Release History
 
+* 0.3.0 
+  * update ejs to 2.2.3
+  * fix file options
 * 0.2.0 update ejs to 1.0.0
 * 0.1.0 initial release
 
