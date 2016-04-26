@@ -8,6 +8,16 @@
     "email": "kyle@dontkry.com",
     "url": "http://dontkry.com"
   },
+  "contributors": [
+    {
+      "name": "Kyle Robinson Young",
+      "email": "kyle@dontkry.com",
+      "url": "http://dontkry.com"
+    }, {
+      "name": "Stefan Grönke",
+      "email": "stefan@gronke.net"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/shama/grunt-ejs.git"
