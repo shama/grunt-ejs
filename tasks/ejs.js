@@ -2,7 +2,7 @@
  * grunt-ejs
  * https://github.com/shama/grunt-ejs
  *
- * Copyright (c) 2014 Kyle Robinson Young
+ * Copyright (c) 2020 Kyle Robinson Young
  * Licensed under the MIT license.
  */
 
@@ -13,7 +13,7 @@ module.exports = function(grunt) {
     var options = this.options();
     grunt.verbose.writeflags(options, 'Options');
     this.files.forEach(function(file) {
-      // prevents options declared / overrided
+      // prevents options declared / overridden
       // on file level to be moved to the next file
       options = this.options();
       var out = file.src.map(grunt.file.read).join('');
